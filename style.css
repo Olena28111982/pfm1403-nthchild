@@ -1,0 +1,114 @@
+:root {
+  --color-text-head: white;
+  --color-text-general: #333;
+
+  --color-plan: rgb(121 135 172);
+  --color-starter: rgb(79 98 141);
+  --color-econom: rgb(47 65 115);
+  --color-standart: rgb(22 41 84);
+  --color-prof: rgb(7 21 58);
+
+  --color-dark: rgb(219 219 219);
+  --color-norm: rgb(231 231 231);
+  --color-light: rgb(243 243 243);
+
+  --color-radius: rgb(99 93 93);
+
+  --border-radius: 10px;
+
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+table {
+  max-width: 900px;
+  min-width: 700px;
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  color: var(--color-text-general);
+}
+td,
+th {
+  line-height: 2.5em;
+}
+tbody th {
+  padding-left: 20px;
+  text-align: left;
+}
+
+tbody td {
+  text-align: center;
+}
+
+thead,
+tfoot {
+  color: var(--color-text-head);
+}
+tfoot tr th {
+  line-height: 5em;
+}
+thead tr th:first-child {
+  width: 25%;
+  border-top-left-radius: var(--border-radius);
+  background-color: var(--color-plan);
+}
+thead tr th:nth-child(2) {
+  background-color: var(--color-starter);
+}
+thead tr th:nth-child(3) {
+  background-color: var(--color-econom);
+}
+thead tr th:nth-child(4) {
+  background-color: var(--color-standart);
+}
+thead tr th:last-child {
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--color-prof);
+}
+
+tbody tr:nth-child(odd) > *:nth-child(odd),
+tfoot tr th:nth-child(odd) {
+  background-color: var(--color-dark);
+}
+
+tbody tr:nth-child(odd) > *:nth-child(even),
+tbody tr:nth-child(even) > *:nth-child(odd),
+tfoot tr th:nth-child(even) {
+  background-color: var(--color-norm);
+}
+
+tbody tr:nth-child(even) > *:nth-child(even) {
+  background-color: var(--color-light);
+}
+
+tbody tr td:not(:last-child),
+tbody tr:nth-child(2) > td:nth-child(5) {
+  text-transform: uppercase;
+}
+
+thead tr th p:nth-of-type(1) {
+  margin-bottom: 0;
+  font-size: 40px;
+}
+thead tr th p:nth-of-type(2) {
+  margin-top: 1px;
+}
+
+tfoot tr th button {
+  padding: 5px 20px;
+  background-color: var(--color-dark);
+  border-color: var(--color-radius);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+tfoot tr th:first-child {
+  border-bottom-left-radius: var(--border-radius);
+}
+tfoot tr th:last-child {
+  border-bottom-right-radius: var(--border-radius);
+}
